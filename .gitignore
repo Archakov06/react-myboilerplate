@@ -4,5 +4,4 @@ npm-debug.log
 dist
 yarn-error.log
 yarn.lock
-server.js
 node_modules
