@@ -1,16 +1,13 @@
 const initialState = {
-  accounts: [],
-  started: false,
-  last_like: null
 };
 
-export default function currentStore(state = initialState, action) {
+export default function (state = initialState, action) {
 
   switch (action.type) {
-    case 'SET_ENABLED':
+    case '':
       return {
-        ...state
-      }
+        ...state,
+      };
     default:
       return state;
   }

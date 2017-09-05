@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import * as appActions from '../actions/appActions';
 
 class App extends Component {
 
-  constructor(){
+  constructor() {
     super();
     this.state = {};
-  }
-
-  componentWillMount(){
   }
 
   render() {
@@ -22,16 +19,12 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = ({currentStore}) => {
-  return {
-    currentStore: currentStore
-  };
-};
+const mapStateToProps = ({ currentStore }) => ({
+  currentStore: currentStore,
+});
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    appActions: bindActionCreators(appActions, dispatch)
-  };
-};
+const mapDispatchToProps = (dispatch) => ({
+  appActions: bindActionCreators(appActions, dispatch),
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

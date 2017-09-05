@@ -1,6 +1,4 @@
-export const setAction = (type, value) => {
-  return {
-    type: type,
-    payload: value
-  };
-};
+export const setAction = (type, value) => ({
+  type: type,
+  payload: value,
+});
